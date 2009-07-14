@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  client: :intel
+  reference: ref_f
+  friendly: Friendly B
+  when: 2009-07-14
+  information: Room F
+  limit: 1
+
+two:
+  client: :intel
+  reference: ref_a
+  friendly: Friendly A
+  when: 2009-07-17
+  information: Room A
+  limit: 1

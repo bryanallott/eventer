@@ -1,0 +1,13 @@
+<p>
+  <b>Reference:</b>
+  <%=h @learner.reference %>
+</p>
+
+<p>
+  <b>Friendly:</b>
+  <%=h @learner.friendly %>
+</p>
+
+
+<%= link_to 'Edit', edit_client_learner_path(@client, @learner) %> |
+<%= link_to 'Back', client_learners_path %>

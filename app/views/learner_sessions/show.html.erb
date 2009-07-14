@@ -1,0 +1,41 @@
+<p>
+  <b>Session:</b>
+  <%=h @session.information %>
+</p>
+<p>
+  <b>Learner:</b>
+  <%=h @learner_session.learner.friendly %>
+</p>
+<p>
+  <b>Associated:</b>
+  <%=h Eventer::Associations[@learner_session.associated] %>
+</p>
+
+<p>
+  <b>Invited:</b>
+  <%=h @learner_session.invited %>
+</p>
+
+<p>
+  <b>Confirmed:</b>
+  <%=h @learner_session.confirmed %>
+</p>
+
+<p>
+  <b>Attended:</b>
+  <%=h @learner_session.attended %>
+</p>
+
+<p>
+  <b>Partial:</b>
+  <%=h @learner_session.partial %>
+</p>
+
+<p>
+  <b>Satisified:</b>
+  <%=h @learner_session.satisified %>
+</p>
+
+
+<%= link_to 'Edit', edit_client_session_learner_session_path(@client, @session, @learner_session) %> |
+<%= link_to 'Back', client_session_learner_sessions_path(@client, @session) %>

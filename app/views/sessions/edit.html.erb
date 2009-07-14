@@ -1,0 +1,32 @@
+<h1>Editing Session</h1>
+
+<% form_for([@client, @session]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :reference %><br />
+    <%= f.text_field :reference %>
+  </p>
+  <p>
+    <%= f.label :friendly %><br />
+    <%= f.text_field :friendly %>
+  </p>
+  <p>
+    <%= f.label :when %><br />
+    <%= f.date_select :when %>
+  </p>
+  <p>
+    <%= f.label :information %><br />
+    <%= f.text_field :information %>
+  </p>
+  <p>
+    <%= f.label :limit %><br />
+    <%= f.text_field :limit %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', [@client, @session] %> |
+<%= link_to 'Back', client_sessions_path(@client) %>

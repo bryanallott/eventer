@@ -1,0 +1,27 @@
+<p>
+  <b>Reference:</b>
+  <%=h @session.reference %>
+</p>
+<p>
+  <b>Friendly:</b>
+  <%=h @session.friendly %>
+</p>
+
+<p>
+  <b>When:</b>
+  <%=h @session.when %>
+</p>
+
+<p>
+  <b>Information:</b>
+  <%=h @session.information %>
+</p>
+
+<p>
+  <b>Limit:</b>
+  <%=h @session.limit %>
+</p>
+
+
+<%= link_to 'Edit', edit_client_session_path(@client, @session) %> |
+<%= link_to 'Back', client_sessions_path(@client) %>

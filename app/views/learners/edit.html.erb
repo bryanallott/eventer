@@ -1,0 +1,20 @@
+<h1>Editing learner</h1>
+
+<% form_for([@client, @learner]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :reference %><br />
+    <%= f.text_field :reference %>
+  </p>
+  <p>
+    <%= f.label :friendly %><br />
+    <%= f.text_field :friendly %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', [@client, @learner] %> |
+<%= link_to 'Back', client_learners_path %>

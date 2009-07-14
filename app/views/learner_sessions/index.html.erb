@@ -1,0 +1,32 @@
+<h1>Listing Learners for <%=h @session.information %> for <%=link_to @session.friendly, client_sessions_path(@client) %></h1>
+
+<table>
+  <tr>
+    <th>Learner</th>
+    <th>Associated</th>
+    <th>Invited</th>
+    <th>Confirmed</th>
+    <th>Attended</th>
+    <th>Partial</th>
+    <th>Satisified</th>
+  </tr>
+
+<% @learner_sessions.each do |learner_session| %>
+  <tr>
+    <td><%=h learner_session.learner.friendly %></td>
+    <td><%=h Eventer::Associations[learner_session.associated] %></td>
+    <td><%=h learner_session.invited %></td>
+    <td><%=h learner_session.confirmed %></td>
+    <td><%=h learner_session.attended %></td>
+    <td><%=h learner_session.partial %></td>
+    <td><%=h learner_session.satisified %></td>
+    <td><%= link_to 'Show', client_session_learner_session_path(@client, @session, learner_session) %></td>
+    <td><%= link_to 'Edit', edit_client_session_learner_session_path(@client, @session, learner_session) %></td>
+    <td><%= link_to 'Destroy', [@client, @session, learner_session], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Add Learner To Session', new_client_session_learner_session_path(@client, @session) %>

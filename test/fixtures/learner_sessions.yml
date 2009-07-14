@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  session: :one
+  learner: :smith
+  associated: 1
+  invited: 2009-07-14
+  confirmed: 2009-07-14
+  attended: 2009-07-14
+  partial: false
+  satisified: false
+
+two:
+  session: :one
+  learner: :jones
+  associated: 1
+  invited: 2009-07-14
+  confirmed: 2009-07-14
+  attended: 2009-07-14
+  partial: false
+  satisified: false

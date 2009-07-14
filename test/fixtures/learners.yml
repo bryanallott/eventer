@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+smith:
+  reference: ref_smith
+  friendly: Mr Smith
+
+jones:
+  reference: ref_jones
+  friendly: Mr Jones

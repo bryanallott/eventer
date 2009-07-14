@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+intel:
+  name: intel.headgear.net
+  client_key: INTEL
+  active: true
+
+live:
+  name: live.headgear.net
+  client_key: LIVE
+  active: true

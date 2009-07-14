@@ -1,0 +1,36 @@
+<h1>Editing Session for <%=h @learner_session.learner.friendly %></h1>
+
+<% form_for([@client, @session, @learner_session]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :session %><br />
+    <%= f.collection_select :session_id, Session.find_all_by_client_id(@client), :id, :information, {:prompt => true} %>
+  </p>
+  <p>
+    <%= f.label :invited %><br />
+    <%= f.date_select :invited %>
+  </p>
+  <p>
+    <%= f.label :confirmed %><br />
+    <%= f.date_select :confirmed %>
+  </p>
+  <p>
+    <%= f.label :attended %><br />
+    <%= f.date_select :attended %>
+  </p>
+  <p>
+    <%= f.label :partial %><br />
+    <%= f.check_box :partial %>
+  </p>
+  <p>
+    <%= f.label :satisified %><br />
+    <%= f.check_box :satisified %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', [@client, @session, @learner_session] %> |
+<%= link_to 'Back', client_session_learner_sessions_path(@client, @session) %>

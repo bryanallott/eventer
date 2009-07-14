@@ -1,0 +1,29 @@
+<h1>Listing <%= link_to @client.name, clients_path %> Sessions</h1>
+
+<table>
+  <tr>
+    <th>Friendly</th>
+    <th>When</th>
+    <th>Information</th>
+    <th>Limit</th>
+    <th colspan="3">Actions</th>
+    <th>Attendees</th>
+  </tr>
+
+<% @client.sessions.each do |session| %>
+  <tr>
+    <td><%=h session.friendly %></td>
+    <td><%=h session.when %></td>
+    <td><%=h session.information %></td>
+    <td><%=h session.limit %></td>
+    <td><%= link_to 'Show', [@client, session] %></td>
+    <td><%= link_to 'Edit', edit_client_session_path(@client, session) %></td>
+    <td><%= link_to 'Destroy', [@client, session], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'View Attendees', client_session_learner_sessions_path(@client, session) %> (<%=h "#{session.learner_sessions.length}" %>)</td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Add New Session', new_client_session_path(@client) %>

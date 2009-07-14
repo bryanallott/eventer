@@ -1,0 +1,20 @@
+<h1>Listing learners for <%= link_to @client.name, clients_path %></h1>
+
+<table>
+  <tr>
+    <th>Friendly</th>
+  </tr>
+
+<% @learners.each do |learner| %>
+  <tr>
+    <td><%=h learner.friendly %></td>
+    <td><%= link_to 'Show', [@client, learner] %></td>
+    <td><%= link_to 'Edit', edit_client_learner_path(@client, learner) %></td>
+    <td><%= link_to 'Destroy', [@client, learner], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Add New Learner', new_client_learner_path %>
